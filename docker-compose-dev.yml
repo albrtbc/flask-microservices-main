@@ -31,6 +31,18 @@ services:
     links:
       - users-db
 
+  swagger:
+    container_name: swagger
+    build:
+      context: ../flask-microservices-swagger
+    ports:
+      - '8080:8080' # expose ports - HOST:CONTAINER
+    environment:
+        - API_URL=https://raw.githubusercontent.com/bertobc/flask-microservices-swagger/master/swagger.json
+    depends_on:
+      users-service:
+        condition: service_started
+
   web-service:
     container_name: web-service
     build: 
