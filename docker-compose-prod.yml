@@ -33,7 +33,7 @@ services:
   swagger:
     container_name: swagger
     build:
-      context: ../flask-microservices-swagger
+      context: https://github.com/bertobc/flask-microservices-swagger.git
     ports:
       - '8080:8080' # expose ports - HOST:CONTAINER
     environment:
