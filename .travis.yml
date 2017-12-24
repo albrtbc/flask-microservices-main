@@ -24,13 +24,13 @@ env:
     - USERS=flask-microservices-users
     - USERS_REPO=https://github.com/bertobc/$USERS.git
     - USERS_DB=flask-microservices-users_db
-    - USERS_DB_REPO=https://github.com/bertobc/$USERS_DB.git#master:project/db
+    - USERS_DB_REPO=https://github.com/bertobc/$USERS.git#master:project/db
     - CLIENT=flask-microservices-client
     - CLIENT_REPO=https://github.com/bertobc/$CLIENT.git
     - SWAGGER=flask-microservices-swagger
     - SWAGGER_REPO=https://github.com/bertobc/$SWAGGER.git
     - NGINX=flask-microservices-nginx
-    - NGINX_REPO=https://github.com/bertobc/$NGINX.git
+    - NGINX_REPO=https://github.com/bertobc/flask-microservices-main.git#master:nginx
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
