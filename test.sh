@@ -3,9 +3,9 @@
 fails=''
 
 inspect() {
-  if [ $1 -ne 0 ]; then
-    fails="${fails} $2"
-  fi
+    if [ $1 -ne 0 ]; then
+        fails="${fails} $2"
+    fi
 }
 
 docker-compose run users-service python manage.py test
@@ -15,10 +15,10 @@ testcafe chrome e2e
 inspect $? e2e
 
 if [ -n "${fails}" ];
-  then
+then
     echo "Tests failed: ${fails}"
     exit 1
-  else
+else
     echo "Tests passed!"
     exit 0
 fi
